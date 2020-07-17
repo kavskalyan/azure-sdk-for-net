@@ -2112,7 +2112,7 @@ namespace Microsoft.Azure.Management.CosmosDB
             HttpStatusCode _statusCode = _httpResponse.StatusCode;
             cancellationToken.ThrowIfCancellationRequested();
             string _responseContent = null;
-            if (!((int)_statusCode != 200) && !((int)_statusCode != 204))
+            if (!((int)_statusCode != 202) && !((int)_statusCode != 204))
             {
                 _httpRequest.RequestUri = _originRequestUri;
             }
